@@ -1,0 +1,28 @@
+
+.reveal {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #F8F7F7;
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+  color: #1D5183;
+}
+
+.reveal code {
+  background-color: #f0f0f0;
+  color: #1D5183;
+}
+
+.logo {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  font-size: 0.8em;
+  color: #888;
+}

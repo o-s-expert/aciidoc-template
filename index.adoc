@@ -1,0 +1,46 @@
+= Apresentação Técnica
+Otávio Santana <https://otaviojava.com>
+:revealjs_theme: white
+:revealjs_slideNumber: true
+:revealjs_hash: true
+:customcss: styles/custom.css
+:imagesdir: images
+:icons: font
+:source-highlighter: rouge
+:revealjsdir: https://cdn.jsdelivr.net/npm/reveal.js
+
+[.logo]
+image::logo-otaviojava.png[width=120, role=logo]
+
+== Introdução
+
+[quote, "Otávio Santana"]
+____
+A excelência começa com a simplicidade e consistência na prática técnica.
+____
+
+== Código Java
+
+[source,java]
+----
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Olá, Otávio!");
+    }
+}
+----
+
+== Diagrama
+
+[plantuml]
+----
+@startuml
+Otavio -> Java : Apaixonado
+Java --> DDD : Praticante
+@enduml
+----
+
+== Contato
+
+[.footer]
+Otávio Santana – https://otaviojava.com – otaviojava@pm.me – @otaviojava
