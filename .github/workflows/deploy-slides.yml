@@ -1,0 +1,35 @@
+name: Build & Deploy AsciiDoc Slides
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1
+
+      - name: Install Asciidoctor Reveal.js
+        run: |
+          gem install asciidoctor-revealjs
+          gem install rouge
+
+      - name: Build slides
+        run: asciidoctor-revealjs \
+              -a revealjs_theme=white \
+              -a customcss=styles/custom.css \
+              -a revealjsdir=https://cdn.jsdelivr.net/npm/reveal.js \
+              -D public index.adoc
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
